@@ -6,10 +6,10 @@
 <body>
   <%- include("./partials/nav.ejs") %>
 
-  <div class="about content">
-    <p>I hope you have a nice day.</p>
-    <p>Right now I have a project with a professor using NodeJS so I just wanted to practice a lil bit</p>
-    <h2 id="changing-color">Thanks for visiting</h2>
+  <div class="start content">
+    <p>I just wanted to prove you I can write enough code to create a website. </p>
+    <p >Such a shame hosting a dynamic website costs ;(</p>
+    <h2 id="changing-color">This website was made with NodeJS, Express and P5js</h2>
     <div id="sketch-container"></div>
    <script>
     let x1, y1;
@@ -22,7 +22,7 @@
     function setup() {
         let canvas = createCanvas(400, 400);
         canvas.parent('sketch-container'); 
-        setInterval(changeColor, 200);
+        setInterval(changeColor, 500);
     }
 
     function draw() {
@@ -36,8 +36,10 @@
         y2 = noise(offset + 20) * width;
         x3 = noise(offset + 250) * width + 20;
         y3 = noise(offset + 30) * height;
+        x4 = noise(offset + 350) * width;
+        y4 = noise(offset + 40) * height;
 
-        line(x1, y1, x2, y2, x3, y3);
+        bezier(x1, y1, x2, y2, x3, y3, x4, y4);
         offset += 0.01;
     }
 

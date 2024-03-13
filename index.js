@@ -18,6 +18,10 @@ app.get('/', (req, res) => {
   res.redirect('/about');
 });
 
+app.get('/start', (req, res) => {
+    res.render('start');
+  });
+
 app.get('/about', (req, res) => {
   res.render('about');
 });
