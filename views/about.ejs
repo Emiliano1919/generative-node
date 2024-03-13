@@ -1,0 +1,46 @@
+<html lang="en">
+    
+<%- include("./partials/header.ejs") %>
+
+
+<body>
+  <%- include("./partials/nav.ejs") %>
+
+  <div class="about content">
+    <h2>About</h2>
+    <div id="sketch-container"></div>
+   <script>
+    let x1, y1;
+    let x2, y2;
+    let x3, y3;
+    let x4, y4;
+    let offset = 0;
+
+    function setup() {
+        let canvas = createCanvas(400, 400);
+        canvas.parent('sketch-container'); 
+    }
+
+    function draw() {
+        // Clear background
+        noFill();
+        strokeWeight(1);
+        stroke(0, 100);
+        x1 = noise(offset + 50) * width;
+        y1 = noise(offset + 10) * height;
+        x2 = noise(offset + 15) * width;
+        y2 = noise(offset + 20) * width;
+        x3 = noise(offset + 250) * width + 20;
+        y3 = noise(offset + 30) * height;
+        x4 = noise(offset + 350) * width;
+        y4 = noise(offset + 40) * height;
+
+        bezier(x1, y1, x2, y2, x3, y3, x4, y4);
+        offset += 0.01;
+    }
+    </script>
+  </div>
+
+  <%- include("./partials/footer.ejs") %>
+</body>
+</html>

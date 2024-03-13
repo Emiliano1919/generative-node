@@ -15,11 +15,15 @@ app.use(express.static('public'));
 
 
 app.get('/', (req, res) => {
-  res.redirect('/create');
+  res.redirect('/about');
 });
 
 app.get('/about', (req, res) => {
   res.render('about');
+});
+
+app.get('/examples', (req, res) => {
+    res.render('examples');
 });
 
 app.use((req, res) => {
