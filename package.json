@@ -1,0 +1,22 @@
+{
+  "name": "generative-node",
+  "version": "1.0.0",
+  "description": "Just a website to test my knowledge",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Emiliano1919/generative-node.git"
+  },
+  "author": "Emiliano",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Emiliano1919/generative-node/issues"
+  },
+  "homepage": "https://github.com/Emiliano1919/generative-node#readme",
+  "dependencies": {
+    "express": "^4.18.3"
+  }
+}
